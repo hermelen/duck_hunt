@@ -2,16 +2,26 @@
 var duck = document.createElement('img');
 duck.className = 'duck';
 duck.src = "../img/duck.png"
-duck.style.transition = "0.5s";
+duck.style.transition = "0.1s";
 duck.addEventListener("click",function(){
-    duck.style.display = "none"
+    duck.style.display = "none";
+    setTimeout(function(){
+      bottomVal = duck.style.bottom = "-20px";
+      leftVal = duck.style.left = "500px";
+      duck.style.display = "block";
+    }, 100);
 })
 var duck2 = document.createElement('img');
 duck2.className = 'duck2';
 duck2.src = "../img/duck.png"
-duck2.style.transition = "0.5s";
+duck2.style.transition = "0.1s";
 duck2.addEventListener("click",function(){
-    duck2.style.display = "none"
+    duck2.style.display = "none";
+    setTimeout(function(){
+      bottomVal2 = duck2.style.bottom = "-20px";
+      leftVal2 = duck2.style.left = "1000px";
+      duck2.style.display = "block";
+    }, 100);
 })
 
 console.log(duck);
@@ -33,19 +43,17 @@ bottomVal = duck.style.bottom = "-20px";
 leftVal = duck.style.left = "500px";
 
 bottomVal2 = duck2.style.bottom = "-20px";
-leftVal2 = duck2.style.left = "100px";
+leftVal2 = duck2.style.left = "1000px";
 
 
 window.setInterval(function(){
   topRandom = getRandomInt(0,100);
-  bottomVal = bottomVal.replace('px', '');// ="200"
-  bottomVal = parseInt(bottomVal);// = 200
+  bottomVal = parseInt(bottomVal.replace('px', ''));// ="200"
   bottomVal = bottomVal+topRandom;
   bottomVal = bottomVal + "px";
   duck.style.bottom = bottomVal;
   leftRandom = getRandomInt(-300,300);
-  leftVal = leftVal.replace('px', '');
-  leftVal = parseInt(leftVal);
+  leftVal = parseInt(leftVal.replace('px', ''));
   leftVal = leftVal+leftRandom;
   leftVal = leftVal + "px";
   duck.style.left = leftVal;
@@ -53,14 +61,12 @@ window.setInterval(function(){
 
 window.setInterval(function(){
   topRandom2 = getRandomInt(0,100);
-  bottomVal2 = bottomVal2.replace('px', '');// ="200"
-  bottomVal2 = parseInt(bottomVal2);// = 200
+  bottomVal2 = parseInt(bottomVal.replace('px', ''));// ="200"
   bottomVal2 = bottomVal2+topRandom2;
   bottomVal2 = bottomVal2 + "px";
   duck2.style.bottom = bottomVal2;
   leftRandom2 = getRandomInt(-300,300);
-  leftVal2 = leftVal2.replace('px', '');
-  leftVal2 = parseInt(leftVal2);
+  leftVal2 = parseInt(leftVal2.replace('px', ''));
   leftVal2 = leftVal2+leftRandom2;
   leftVal2 = leftVal2 + "px";
   duck2.style.left = leftVal2;
@@ -68,8 +74,7 @@ window.setInterval(function(){
 
 window.setInterval(function(){
   leftRandomOuaf = getRandomInt(-1000,1000);
-  leftValOuaf = leftVal.replace('px', '');
-  leftValOuaf = parseInt(leftValOuaf);
+  leftValOuaf = parseInt(leftVal.replace('px', ''));
   leftValOuaf = leftValOuaf+leftRandomOuaf;
   leftValOuaf = leftValOuaf + "px";
   ouaf.style.left = leftValOuaf;
