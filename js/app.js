@@ -1,9 +1,21 @@
 var wWidth = window.innerWidth;
 var wHeight = window.innerHeight;
+var body = document.getElementsByTagName('body')[0];
+// var main = document.createElement('main');
+var main = document.getElementsByTagName('main')[0];
+var backImg = "stage.png"
+main.style.backgroundImage = "url('stage.png')";
+main.style.height = wHeight;
+main.style.width = wWidth;
+
+// body.prepend(main);
+
+console.log(main);
 var duck = document.createElement('img');
 duck.className = 'duck';
 // duck.src = "../img/duck.png"
-duck.src = "/home/alexia/code/duck_hunt/img/duck.png"
+// duck.src = "/home/alexia/code/duck_hunt/img/duck.png"
+duck.src = "/home/hermelen/Code/JS/duck_hunt/img/duck.png"
 duck.style.transition = "1s";
 duck.addEventListener("click",function(){
     duck.style.display = "none";
@@ -16,7 +28,8 @@ duck.addEventListener("click",function(){
 var duck2 = document.createElement('img');
 duck2.className = 'duck2';
 // duck2.src = "../img/duck.png"
-duck2.src = "/home/alexia/code/duck_hunt/img/duck.png"
+// duck2.src = "/home/alexia/code/duck_hunt/img/duck.png"
+duck2.src = "/home/hermelen/Code/JS/duck_hunt/img/duck.png"
 duck2.style.transition = "1s";
 duck2.addEventListener("click",function(){
     duck2.style.display = "none";
@@ -31,13 +44,11 @@ duck2.addEventListener("click",function(){
 var ouaf = document.createElement('img');
 ouaf.className = 'ouaf';
 // ouaf.src = "../img/ouaf.png"
-ouaf.src = "/home/alexia/code/duck_hunt/img/ouaf.png";
+// ouaf.src = "/home/alexia/code/duck_hunt/img/ouaf.png";
+ouaf.src = "/home/hermelen/Code/JS/duck_hunt/img/ouaf.png";
 ouaf.style.transition = "3s";
 
-var main = document.getElementsByTagName('main')[0];
-main.style.height = wHeight;
 console.log(wHeight);
-main.style.width = wWidth;
 
 main.appendChild(duck);
 main.appendChild(duck2);

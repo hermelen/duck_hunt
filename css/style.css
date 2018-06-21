@@ -17,9 +17,13 @@
   position: absolute;
 }
 
-main {
-  /* width: 100%;
-  height: 1000px; */
+html, body {
+  min-height: 100%;
+}
+
+/* main {
+  width: 100%;
+  height: 1000px;
   background-image: url("../img/stage.png");
   background-size: cover;
-}
+} */
